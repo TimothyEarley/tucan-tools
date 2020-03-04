@@ -16,7 +16,7 @@ def main():
     if with_notenspiegel:
         diffs = []
         diffs_without_failed = []
-        for grade in grades:
+        for grade_data in grades:
             grade = grade_data['grade']
             avg = helper.get_avg_from_notenspiegel(grade_data['notenspiegel'])
             if avg < 1:

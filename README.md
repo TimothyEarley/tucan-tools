@@ -53,6 +53,18 @@ You can display the VV with the [tucan-catalog](https://github.com/davidgengenba
 
 The VV exporter crawls the _Anmeldung_ page, not the _VV_ page in TuCan! There are small but irrelevant differences between these two pages. The crawler uses the _Anmeldung_ page in TuCan, because it contains additional infos (like the credit-points of a module).
 
+### Create your calendar
+
+Quickly create a calendar either with all modules from the export or a selection thereof:
+
+```shell
+python3 module_calendar.py
+# or
+python3 module_calendar.py -m "Algorithmen und Datenstrukturen" "Mathematik I"
+```
+
+The program outputs a iCalendar file `module_calendar.ics` which can be imported into most standard calendar programs.
+
 ## Caveats
 - Only exports grades where the Notenspiegel is available. This is by choice, not accident - so technically no caveat but will be perceived as one.
 - Once the `grades.json` got extracted from TuCan, it will be reused whenever possible. So if there are grades/courses missing, just delete the `grades.json` and try again.
